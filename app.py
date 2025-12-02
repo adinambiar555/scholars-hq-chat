@@ -4,7 +4,7 @@ import tempfile
 import os
 
 # --- 1. CONFIGURATION ---
-st.set_page_config(page_title="Scholars HQ", page_icon="🎓", layout="wide")
+st.set_page_config(page_title="Scholars Chatbot", page_icon="🎓", layout="wide")
 st.title("🎓 Scholars HQ: Franchise Support")
 
 # Securely fetch the API key
@@ -43,7 +43,7 @@ with st.sidebar:
 # --- 4. PROCESSING THE FILE ---
 def upload_to_gemini(file):
     """Uploads the file to Google's server and returns the reference."""
-    with st.spinner("Scholars HQ is reading the document..."):
+    with st.spinner("Scholars Chatbot is reading the document..."):
         # Create a temporary file on the server so we can upload it
         with tempfile.NamedTemporaryFile(delete=False, suffix=f".{file.name.split('.')[-1]}") as tmp:
             tmp.write(file.getvalue())
@@ -61,7 +61,7 @@ if "messages" not in st.session_state:
     st.session_state.messages = []
     st.session_state.messages.append({
         "role": "model", 
-        "content": "Hello. I am Scholars HQ. Upload a document in the sidebar to begin, or just ask me a general question."
+        "content": "Hello. I am Scholars Chatbot. Upload a document in the sidebar to begin, or just ask me a general question."
     })
 
 # Display Chat History
@@ -70,7 +70,7 @@ for message in st.session_state.messages:
         st.markdown(message["content"])
 
 # --- 6. THE CHAT INTERFACE ---
-if prompt := st.chat_input("Ask Scholars HQ..."):
+if prompt := st.chat_input("Ask Scholars Chatbot..."):
     
     # 1. Show User Message
     with st.chat_message("user"):
