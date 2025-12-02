@@ -80,7 +80,8 @@ if prompt := st.chat_input("Ask Scholars HQ..."):
     # 2. Generate Response
     with st.chat_message("model"):
         try:
-            model = genai.GenerativeModel("gemini-flash", system_instruction=system_instruction)
+            # Use the explicit stable release version
+            model = genai.GenerativeModel("gemini-2.5-flash", system_instruction=system_instruction)
             
             # Logic: If a file is uploaded, we include it in the prompt.
             # If we already uploaded it this session, we use the cached version to save time.
