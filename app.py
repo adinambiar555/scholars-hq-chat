@@ -14,8 +14,7 @@ except Exception:
 # --- 2. THE KNOWLEDGE BASE (PASTE YOUR IDs HERE) ---
 # Replace the brackets below with the list you just copied from your terminal
 KNOWLEDGE_BASE_FILES = [
-    'files/xxxxx-example-id-1', 
-    'files/yyyyy-example-id-2' 
+  'files/dzr9x8j2oxet', # Source: web_scholarsed.com_about-us_.txt
 ]
 
 # --- 3. THE PERSONA ---
