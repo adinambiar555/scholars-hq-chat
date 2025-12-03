@@ -69,7 +69,7 @@ if prompt := st.chat_input("Ask Scholars HQ..."):
     
     with st.chat_message("model"):
         # We use the standard model now (no complex file tools needed)
-        model = genai.GenerativeModel("gemini-1.5-flash", system_instruction=system_instruction)
+        model = genai.GenerativeModel("gemini-2.5-flash", system_instruction=system_instruction)
         
         # Simple chat generation
         chat = model.start_chat(history=[
